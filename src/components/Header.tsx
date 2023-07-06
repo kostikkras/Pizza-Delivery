@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
     return (
         <div className="header">
             <div className="container">
-                <Link to="/">
+                <Link to="/pizza-delivery">
                     <div className="header__logo">
                         <img width="38" src={logoSvg} alt="Pizza logo" />
                         <div>
@@ -39,7 +39,10 @@ export const Header: React.FC = () => {
                 {location.pathname !== "/cart" && <Search />}
                 <div className="header__cart">
                     {location.pathname !== "/cart" && (
-                        <Link to="/cart" className="button button--cart">
+                        <Link
+                            to="/pizza-delivery/cart"
+                            className="button button--cart"
+                        >
                             <span>{totalPrice} ₽</span>
                             <div className="button__delimiter"></div>
                             <svg
